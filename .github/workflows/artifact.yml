@@ -9,21 +9,21 @@ workflow_dispatch:
 jobs:
  
  artifact_job:
- name: artifact job
- runs-on: ubuntu-latest
+   name: artifact job
+   runs-on: ubuntu-latest
  
- steps: 
-  - name: checkout
-    uses: actions/checkout@v2
+   steps: 
+   - name: checkout
+     uses: actions/checkout@v2
   
-  - name: builds ${{ env.FILE_NAME }} for ubuntu latest.
-    run: touch ${{ env.FILE_NAME }}.go
+   - name: builds ${{ env.FILE_NAME }} for ubuntu latest.
+     run: touch ${{ env.FILE_NAME }}.go
   
-  - name: upload artifact for linux
-    uses: actions/upload-artifact@v1.0.0
-    with:
-      name: linux
-      path: ./${{ env.FILE_NAME }}.go
+   - name: upload artifact for linux
+     uses: actions/upload-artifact@v1.0.0
+     with:
+       name: linux
+       path: ./${{ env.FILE_NAME }}.go
   
   
   
