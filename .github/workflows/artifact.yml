@@ -4,7 +4,6 @@ on: push
 env:
   FILE_NAME: my_file
 
-workflow_dispatch:
 
 jobs:
  
